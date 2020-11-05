@@ -1,0 +1,608 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'website/img/fav.png' %}">
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Karma Shop</title>
+    <!--
+			CSS
+			============================================= -->
+    <link rel="stylesheet" href="{% static 'website/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/nouislider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/ion.rangeSlider.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/css/ion.rangeSlider.skinFlat.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/css/main.css' %}">
+</head>
+
+<body>
+
+    <!-- Start Header Area -->
+<header class="header_area sticky-header">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light main_box">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="home.html"><img src="{% static 'website/img/Mlogo.png' %}" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="home.html"></a></li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdownHome" role="button" aria-haspopup="true"
+								 aria-expanded="false">Comprar</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="category.html">Categoria</a></li>
+									<li class="nav-item"><a class="nav-link" href="singleproduct.html">Detalles de productos</a></li>
+									<li class="nav-item"><a class="nav-link" href="checkout.html">Ver Productos</a></li>
+									<li class="nav-item"><a class="nav-link" href="cart.html">Revisar listado</a></li>
+									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confiormacion</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Noticias</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="blog.html">Tendencias</a></li>
+									<li class="nav-item"><a class="nav-link" href="singleblog.html">Detalles</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Paginas</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="login.html">Cuenta</a></li>
+									<li class="nav-item"><a class="nav-link" href="tracking.html">Seguimiento</a></li>
+									<li class="nav-item"><a class="nav-link" href="elements.html">Elementos</a></li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
+							<li class="nav-item">
+								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="search_input" id="search_input_box">
+			<div class="container">
+				<form class="d-flex justify-content-between">
+					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
+					<button type="submit" class="btn"></button>
+					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+				</form>
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
+
+    <!-- Start Banner Area -->
+    <section class="banner-area organic-breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+                <div class="col-first">
+                    <h1>Página de Noticias</h1>
+                    <nav class="d-flex align-items-center">
+                        <a href="home.html">Inicio<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="category.html">Noticias</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Area -->
+
+    <!--================Blog Categorie Area =================-->
+    <section class="blog_categorie_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="categories_post">
+                        <img src="{% static 'website/img/blog/cat-post/cat-post-14.jpg' %}" alt="post">
+                        <div class="categories_details">
+                            <div class="categories_text">
+                                <a href="blog-details.html">
+                                    <h5>Motoqueros</h5>
+                                </a>
+                                <div class="border_line"></div>
+                                <p>Disfruta la vida en dos ruedas!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="categories_post">
+                        <img src="{% static 'website/img/blog/cat-post/cat-post-13.jpg' %}" alt="post">
+                        <div class="categories_details">
+                            <div class="categories_text">
+                                <a href="blog-details.html">
+                                    <h5>Tecnologia en dos ruedas</h5>
+                                </a>
+                                <div class="border_line"></div>
+                                <p>Ponte al día!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="categories_post">
+                        <img src="{% static 'website/img/blog/cat-post/motorcycles2020.jpg' %}" alt="post">
+                        <div class="categories_details">
+                            <div class="categories_text">
+                                <a href="blog-details.html">
+                                    <h5>Lanzamiento</h5>
+                                </a>
+                                <div class="border_line"></div>
+                                <p>Bellezas venideras!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Categorie Area =================-->
+
+    <!--================Blog Area =================-->
+    <section class="blog_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="blog_left_sidebar">
+                        <article class="row blog_item">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a class="active" href="#">Novedad,</a>
+                                        <a href="#">Tecnología,</a>
+                                        <a href="#">Motoqueros,</a>
+                                        <a href="#">Lanzamiento</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Dino Gordillo<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">22 Sep, 2020<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">1.2M Visitas<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">06 Comentarios<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="{% static 'website/img/blog/main-blog/m-blog-12.jpg' %}" alt="">
+                                    <div class="blog_details">
+                                        <a href="singleblog.html">
+                                            <h2>2020 Honda Rebel 500 ABS | Road Test Review</h2>
+                                        </a>
+                                        <p>Sixteen-inch wheels are not a common size on motorcycles of today and limit your tire choices.
+                                            Using smaller wheels is one of the many ways that the Rebel maintains its low seat height. Photography by Mike Towers.</p>
+                                        <a href="singleblog.html" class="white_bg_btn">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="row blog_item">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a href="#">Novedad,</a>
+                                        <a class="active" href="#">Tecnología,</a>
+                                        <a href="#">Motoqueros,</a>
+                                        <a href="#">Lanzamiento</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Dino Gordillo<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">22 Sep, 2020<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">1.2M Visitas<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">06 Comentarios<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="{% static 'website/img/blog/main-blog/m-blog-21.jpg' %}" alt="">
+                                    <div class="blog_details">
+                                        <a href="singleblog.html">
+                                            <h2>2010 Triumph Rocket III Roadster Vs. 2010 Star VMax</h2>
+                                        </a>
+                                        <p>El milagro aunque no lo parezca, no es que el motor Vmax siga implementandose, pero que Yamaha quiera
+                                        vendernos una moto coneste motor, y que cueste aproximadamente un 1.500.000 menos que respecto al año 2010 es increible. Esta moto
+                                        cuesta la modica suma de 15.000.000. Su contrincante, esta vez es la reiventada 2020 rocket 3
+                                        que a pesar de las infimas modificaciones continua con precio al alza por 11.000.000. Veamos aqui que moto se lleva el trono
+                                        de las motos de menos de 160 caballos de fuerza!.</p>
+                                        <a href="singleblog.html" class="white_bg_btn">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="row blog_item">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a href="#">Novedad,</a>
+                                        <a href="#">Tecnología,</a>
+                                        <a class="active" href="#">Motoqueros,</a>
+                                        <a href="#">Lanzamiento</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Dino Gordillo<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">22 Sep, 2020<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">1.2M Visitas<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">06 Comentarios<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="{% static 'website/img/blog/main-blog/m-blog-31.jpg' %}" alt="">
+                                    <div class="blog_details">
+                                        <a href="singleblog.html">
+                                            <h2>Conduce con estilo!!</h2>
+                                        </a>
+                                        <p></p>
+                                        <a href="singleblog.html" class="white_bg_btn">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="row blog_item">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a href="#">Novedad,</a>
+                                        <a href="#">Tecnología,</a>
+                                        <a href="#">Motoqueros,</a>
+                                        <a class="active" href="#">Lanzamiento</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Dino Gordillo<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">22 Sep, 2020<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">1.2M Visitas<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">06 Comentarios<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="{% static 'website/img/blog/main-blog/m-blog-41.jpg' %}" alt="">
+                                    <div class="blog_details">
+                                        <a href="singleblog.html">
+                                            <h2>Las Chicas del padock</h2>
+                                        </a>
+                                        <p>Todo gran premio de motociclismo tiene a estas chicas! .</p>
+                                        <a href="singleblog.html" class="white_bg_btn">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="row blog_item">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a href="#">Novedad,</a>
+                                        <a href="#">Tecnología,</a>
+                                        <a href="#">Motoqueros,</a>
+                                        <a href="#">Lanzamiento</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Dino Gordillo<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">22 Sep, 2020<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">1.2M Visitas<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">06 Comentarios<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="{% static 'website/img/blog/main-blog/m-blog-51.jpg' %}" alt="">
+                                    <div class="blog_details">
+                                        <a href="singleblog.html">
+                                            <h2>MotoGP</h2>
+                                        </a>
+                                        <p>MCSE boot camps have its supporters and its detractors. Some people do not
+                                            understand why you should have to spend money on boot camp when you can get
+                                            the MCSE study materials yourself at a fraction.</p>
+                                        <a href="singleblog.html" class="white_bg_btn">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Previous">
+                                        <span aria-hidden="true">
+                                            <span class="lnr lnr-chevron-left"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a href="#" class="page-link">01</a></li>
+                                <li class="page-item active"><a href="#" class="page-link">02</a></li>
+                                <li class="page-item"><a href="#" class="page-link">03</a></li>
+                                <li class="page-item"><a href="#" class="page-link">04</a></li>
+                                <li class="page-item"><a href="#" class="page-link">09</a></li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Next">
+                                        <span aria-hidden="true">
+                                            <span class="lnr lnr-chevron-right"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget search_widget">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Publicaciones" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
+                                </span>
+                            </div><!-- /input-group -->
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single_sidebar_widget author_widget">
+                            <img class="author_img rounded-circle" src="{% static 'website/img/blog/author.png' %}" alt="">
+                            <h4>Mario Torres</h4>
+                            <p>Senior Founder Rider Chile</p>
+                            <div class="social_icon">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-github"></i></a>
+                                <a href="#"><i class="fa fa-behance"></i></a>
+                            </div>
+                            <p>En Riders Chile creemos en que la mejor opcvion de compra de moptociletas e implementos siempre estará acá . Somos apasionados por las dos ruedas y
+                                quereBlogmos hacer crecer este medio de transporte de manera responsable en la comunidad.</p>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single_sidebar_widget popular_post_widget">
+                            <h3 class="widget_title">Publicaciones populares</h3>
+                            <div class="media post_item">
+                                <img src="{% static 'website/img/blog/popular-post/post12.jpg' %}" alt="post">
+                                <div class="media-body">
+                                    <a href="blog-details.html">
+                                        <h3>Cómo gastar menos combustible</h3>
+                                    </a>
+                                    <p>02 Horas atras</p>
+                                </div>
+                            </div>
+                            <div class="media post_item">
+                                <img src="{% static 'website/img/blog/popular-post/post2.jpg' %}" alt="post">
+                                <div class="media-body">
+                                    <a href="blog-details.html">
+                                        <h3>Los mejores neumaticos</h3>
+                                    </a>
+                                    <p>02 Horas atras</p>
+                                </div>
+                            </div>
+                            <div class="media post_item">
+                                <img src="{% static 'website/img/blog/popular-post/post3.jpg' %}" alt="post">
+                                <div class="media-body">
+                                    <a href="blog-details.html">
+                                        <h3>Cuando debemos lubricar?</h3>
+                                    </a>
+                                    <p>03 Horas atras</p>
+                                </div>
+                            </div>
+                            <div class="media post_item">
+                                <img src="{% static 'website/img/blog/popular-post/post4.jpg' %}" alt="post">
+                                <div class="media-body">
+                                    <a href="blog-details.html">
+                                        <h3>Cuidados en la pintura</h3>
+                                    </a>
+                                    <p>01 Hora atras</p>
+                                </div>
+                            </div>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single_sidebar_widget ads_widget">
+                            <a href="#"><img class="img-fluid" src="{% static 'website/img/blog/add.jpg' %}" alt=""></a>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single_sidebar_widget post_category_widget">
+                            <h4 class="widget_title">Categoría de publicaciones</h4>
+                            <ul class="list cat-list">
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Novedad</p>
+                                        <p>37</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Estilo de vida</p>
+                                        <p>24</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Vestimenta</p>
+                                        <p>59</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Accesorios</p>
+                                        <p>29</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p></p>
+                                        <p>15</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Architecture</p>
+                                        <p>09</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Adventure</p>
+                                        <p>44</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single-sidebar-widget newsletter_widget">
+                            <h4 class="widget_title">E-mail</h4>
+                            <p>
+                                Mantente informado de nuestros productos y noticias
+                            </p>
+                            <div class="form-group d-flex flex-row">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Ingresa e-mail"
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
+                                </div>
+                                <a href="#" class="bbtns">Suscribir</a>
+                            </div>
+                            <p class="text-bottom">puedes cancelar tu suscripción aquí</p>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single-sidebar-widget tag_cloud_widget">
+                            <h4 class="widget_title">Etiquetas en la nube</h4>
+                            <ul class="list">
+                                <li><a href="#">Novedad</a></li>
+                                <li><a href="#">Tecnología</a></li>
+                                <li><a href="#">Motoqueros</a></li>
+                                <li><a href="#">Lanzamiento</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+
+    <!-- start footer Area -->
+    <footer class="footer-area section_gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3  col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>Nosotros</h6>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>E-mail</h6>
+                        <p>Ingresa Email</p>
+                        <div class="" id="mc_embed_signup">
+
+                            <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="form-inline">
+
+                                <div class="d-flex flex-row">
+
+                                    <input class="form-control" name="EMAIL" placeholder="Ingresa Email" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Enter Email '" required="" type="email">
+
+
+                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right"
+                                            aria-hidden="true"></i></button>
+                                    <div style="position: absolute; left: -5000px;">
+                                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
+                                            type="text">
+                                    </div>
+
+                                    <!-- <div class="col-lg-4 col-md-4">
+                                                    <button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+                                                </div>  -->
+                                </div>
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  col-md-6 col-sm-6">
+                    <div class="single-footer-widget mail-chimp">
+                        <h6 class="mb-20">Instragram</h6>
+                        <ul class="instafeed d-flex flex-wrap">
+                            <li><img src="{% static 'website/img/i1.jpg' %}" alt=""></li>
+                            <li><img src="{% static 'website/img/i2.jpg' %}" alt=""></li>
+                            <li><img src="{% static 'website/img/i3.jpg' %}" alt=""></li>
+                            <li><img src="{% static 'website/img/i4.jpg' %}" alt=""></li>
+                            <li><img src="{% static 'website/img/i5.jpg' %}" alt=""></li>
+                            <li><img src="{% static 'website/img/i6.jpg' %}" alt=""></li>
+                            <li><img src="{% static 'website/img/i7.jpg' %}" alt=""></li>
+                            <li><img src="{% static 'website/img/i8.jpg' %}" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>Siguenos</h6>
+                        <p></p>
+                        <div class="footer-social d-flex align-items-center">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+                <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer Area -->
+
+    <script src="{% static 'website/js/vendor/jquery-2.2.4.min.js' %}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="{% static 'website/js/vendor/bootstrap.min.js' %}"></script>
+	<script src="{% static 'website/js/jquery.ajaxchimp.min.js' %}"></script>
+	<script src="{% static 'website/js/jquery.nice-select.min.js' %}"></script>
+	<script src="{% static 'website/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'website/js/nouislider.min.js' %}"></script>
+	<script src="{% static 'website/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'website/js/owl.carousel.min.js' %}"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="{% static 'website/js/gmaps.min.js' %}"></script>
+	<script src="{% static 'website/js/main.js' %}"></script>
+</body>
+
+</html>
